@@ -3,9 +3,34 @@
 	<head>
 		<meta charset="utf-8">
 		<title>UnitTest</title>
+		<style>
+			.passed {
+				background-color: blue;
+				color: white;
+			}
+			.fail {
+				background: gray;
+				color: yellow;
+				text-decoration: line-through;
+			}
+		</style>
 	</head>
 
   <body>
   	<ul id="result"></ul>
+
+		<script type="text/javascript">
+			function assert(value, status) {
+				var li = document.createElement('li')
+				var ul = document.getElementById('result')
+
+				li.className = value ? 'passed' : 'fail'
+
+				li.innerHTML = status
+				ul.appendChild(li)
+			}
+		</script>
+
+		<script type="text/javascript" src="test.js"></script>
   </body>
 </html>
