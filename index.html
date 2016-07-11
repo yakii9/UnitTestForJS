@@ -8,7 +8,7 @@
 				background-color: blue;
 				color: white;
 			}
-			.fail {
+			.failed {
 				background: gray;
 				color: yellow;
 				text-decoration: line-through;
@@ -24,7 +24,7 @@
 				var li = document.createElement('li')
 				var ul = document.getElementById('result')
 
-				li.className = value ? 'passed' : 'fail'
+				li.className = value ? 'passed' : 'failed'
 
 				li.innerHTML = status
 				ul.appendChild(li)
